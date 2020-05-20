@@ -12,7 +12,8 @@ export default class MulterGoogleCloudStorage implements multer.StorageEngine {
 	private options: ConfigurationObject & { acl?: string, bucket?: string, contentType?: ContentTypeFunction };
 
 	getFilename(req, file, cb) {
-    	cb(null,`${uuid()}_${file.originalname}`);
+      console.log("hello");
+    	cb(null,`${uuid()}`);
 	}
 	getDestination( req, file, cb ) {
 		cb( null, '' );
